@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="v-reset v-no-transition has-gui ltr" dir="ltr">
+
+<head>
+    <!-- Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5">
+    <title>Hyperbiosis</title> <!-- Icons -->
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon-64x64.png" sizes="64x64">
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+    <link rel="apple-touch-icon" href="images/192x192.png"> <!-- Web -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="https://lucabermejo.com/en/manifest.webmanifest"> <!-- Meta -->
+    <meta name="description"
+        content="Generative sonic installation that emerges from collaboration between human and non-human life.">
+    <meta name="keywords" content="biosonification, biodata, arduino, MIDI">
+    <meta name="lang" content="en">
+    <meta name="abstract"
+        content="Generative sonic installation that emerges from collaboration between human and non-human life.">
+    <!-- Links -->
+    <link rel="canonical" href="https://lucabermejo.com/en/personal-projects/hyperbiosis">
+    <link rel="alternate" hreflang="es" href="https://lucabermejo.com/es/personal-projects/hyperbiosis">
+    <link rel="alternate" hreflang="en" href="https://lucabermejo.com/en/personal-projects/hyperbiosis">
+    <!--Facebook Tags-->
+    <meta property="og:site_name" content="Luca Bermejo">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Hyperbiosis">
+    <meta property="og:description"
+        content="Generative sonic installation that emerges from collaboration between human and non-human life.">
+    <meta property="og:url" content="https://lucabermejo.com/en/personal-projects/hyperbiosis">
+    <!--Twitter Card-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Hyperbiosis">
+    <meta name="twitter:description"
+        content="Generative sonic installation that emerges from collaboration between human and non-human life.">
+    <link rel="stylesheet" href="../../../assets/css/app.da5105bc9fd4609f2364.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116006521-1"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-116006521-1'); </script>
+</head>
+
+<body class="v-loading">
+    <div class="v-preloader" id="preloader">
+        <div class="v-preloader__loading" data-loading></div>
+    </div>
+    <div class="page" id="page">
+        <div class="header-plane"></div>
+        <header class="header">
+            <div class="header__wrap">
+                <div class="header__logo" translate="no"><a href="../../../home/index.html" class="v-al">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1694 954.6">
+                        <path d="M1391.72,3.21c175.77,18.94,307.41,170.74,302.13,342.3-5.03,163.57-133.22,302.75-300.52,321.41-369.09,.54-738.18,1.07-1107.27,1.61V0c368.55,1.07,737.11,2.14,1105.66,3.21Zm298.91,708.72H286.06v242.67H1690.63v-242.67ZM242.67,0H0V954.6H242.67V0Zm113.43,462.2v-76.28h-11.93v86.02h60.09v-9.75h-48.16Zm72.69,3.19c7.06,5.53,15.85,8.29,26.38,8.29s19.32-2.76,26.26-8.29c6.94-5.56,10.42-12.75,10.42-21.56v-57.91h-11.93v55.05c0,6.98-2.23,12.45-6.69,16.41-4.46,3.96-10.48,5.94-18.06,5.94s-13.61-1.98-18.09-5.94c-4.48-3.96-6.72-9.43-6.72-16.41v-55.05h-11.93v57.91c0,8.77,3.45,15.96,10.36,21.56Zm156.3,1.96v-10.75c-6.42,4.48-15.06,6.72-25.93,6.72-10.23,0-18.84-3.04-25.82-9.13-6.94-6.16-10.42-14.58-10.42-25.26s3.47-19.1,10.42-25.15c6.95-6.16,15.55-9.24,25.82-9.24,10.86,0,19.51,2.24,25.93,6.72v-10.75c-6.27-4.22-15.1-6.33-26.49-6.33-8.89,0-16.97,1.72-24.25,5.15-7.17,3.4-13.01,8.57-17.53,15.51-4.44,6.83-6.66,14.86-6.66,24.08s2.22,17.25,6.66,24.08c4.48,6.8,10.31,11.94,17.5,15.43,7.19,3.49,15.28,5.24,24.28,5.24,11.39,0,20.22-2.11,26.49-6.33Zm98.68,4.59l-37.97-86.02h-12.15l-37.02,86.02h11.93l9.41-22.96h43.46l9.75,22.96h12.6Zm-26.27-32.09h-35.79l17.58-42.79,18.2,42.79Zm-274.81,169.72c9.67,0,17.4-2.22,23.19-6.66,5.94-4.48,8.9-10.29,8.9-17.42,0-5.3-1.7-9.82-5.1-13.55-3.4-3.73-8.38-6.48-14.95-8.23,4.89-1.57,8.89-4.02,11.98-7.37,3.1-3.34,4.65-7.01,4.65-11,0-6.87-2.59-12.22-7.76-16.04-5.17-3.83-12.37-5.74-21.59-5.74h-37.86v86.02h38.53Zm-26.6-76.39h21.79c7.43,0,12.75,1.05,15.96,3.14s4.82,5.49,4.82,10.19c0,9.3-6.93,13.94-20.78,13.94h-21.79v-27.27Zm45.98,51.75c0,10.01-7.3,15.01-21.9,15.01h-24.08v-30.19h22.46c15.68,0,23.52,5.06,23.52,15.18Zm45.98,14.9v-29.12h41.61v-9.52h-41.61v-27.89h45.75v-9.74h-57.68v86.02h57.68v-9.74h-45.75Zm100.53-22.35l28.34,32.09h15.4l-30.41-33.94c6.83-1.61,12.45-4.67,16.86-9.18,4.44-4.55,6.66-9.88,6.66-15.96,0-8.33-2.91-14.9-8.74-19.71-5.71-4.82-13.52-7.22-23.41-7.22h-37.13v86.02h11.93v-32.09h20.5Zm2.3-44.19c6.83,0,12.18,1.54,16.04,4.62s5.8,7.27,5.8,12.57-2.02,9.45-6.05,12.54c-4.03,3.1-9.3,4.65-15.79,4.65h-22.79v-34.39h22.79Zm152.66,.78l5.26,75.49h11.26l-6.55-86.02h-15.96l-34.05,72.69-34.16-72.69h-16.07l-6.55,86.02h11.26l5.26-75.49,34.67,75.49h10.75l34.89-75.49Zm51.8,65.75v-29.12h41.61v-9.52h-41.61v-27.89h45.75v-9.74h-57.68v86.02h57.68v-9.74h-45.75Zm81.26-12.6c0,4.44-1.44,7.77-4.31,9.97-2.88,2.2-6.81,3.3-11.82,3.3-2.99,0-5.97-.45-8.96-1.34v9.02c2.69,1.31,6.51,1.96,11.48,1.96,7.13,0,13.2-1.79,18.2-5.38,4.96-3.55,7.45-8.62,7.45-15.23v-65.97h-12.04v63.67Zm106.85,11.93c8.44-8.14,12.66-19,12.66-32.59s-4.22-24.34-12.66-32.48c-8.48-8.18-19.06-12.26-31.75-12.26s-23.54,4.01-31.98,12.04c-8.36,7.99-12.54,18.89-12.54,32.71s4.18,24.72,12.54,32.71c8.44,8.03,19.1,12.04,31.98,12.04s23.39-4.05,31.75-12.15Zm-8.9-57.96c5.86,6.16,8.79,14.62,8.79,25.37s-2.93,19.21-8.79,25.37c-5.75,6.01-13.37,9.02-22.85,9.02s-17.32-3.01-23.07-9.02c-5.79-6.05-8.68-14.5-8.68-25.37s2.89-19.32,8.68-25.37c5.75-6.01,13.44-9.02,23.07-9.02s17.1,3.01,22.85,9.02Z"
+                                fill="#fff" />
+                        
+                    </svg>
+                    <span>Luca Bermejo</span> </a> </div>
+                <dynamic-page-content class="header__nav dynamic-page-content" content-key="header-dynamic-key">
+                    <!-- For Blog Category -->
+                    <!-- For Blog Article -->
+                    <!-- For Portfolio -->
+                    <ul>
+                        <li>
+                            <dir-button class=" dir-button stroke-invert" type="a"
+                                href="../../all-projects/index.html" >All Projects</dir-button>
+                        </li>
+                        <li>
+                        <li>
+                            <dir-button class=" dir-button stroke-invert active" type="a"
+                                href="../../personal-projects/index.html">Personal Projects</dir-button>
+                        </li>
+                        <li>
+                            <dir-button class=" dir-button stroke-invert " type="a"
+                                href="../../comissions/">Comissions</dir-button>
+                        </li>
+
+                    </ul>
+                </dynamic-page-content>
+                <div class="header__states">
+                    <ul class="header__languages js-languages" translate="no">
+                        <li class> <a href="index.html" class> <span> es </span> </a>
+                        </li>
+                        <li class=" active"> <a href="index.html" class=" active">
+                                <span> en </span> </a> </li>
+                    </ul>
+                    <div class="header__burger"> <button class="burger-button js-menu-button"> <span>Menu</span>
+                            <div class="show"> <svg width="20" height="8" viewBox="0 0 20 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0H0V2H20V0ZM20 6H0V8H20V6Z"
+                                        fill="black" />
+                                </svg> <svg width="30" height="8" viewBox="0 0 30 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M30 0H0V2H30V0ZM30 6H0V8H30V6Z"
+                                        fill="white" />
+                                </svg> </div>
+                            <div class="hide"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.22168 14.364L14.3638 0.221817L15.778 1.63603L1.63589 15.7782L0.22168 14.364Z"
+                                        fill="#000" />
+                                    <path
+                                        d="M15.7783 14.364L1.63618 0.221817L0.221971 1.63603L14.3641 15.7782L15.7783 14.364Z"
+                                        fill="#000" />
+                                </svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.686279 21.8995L21.8995 0.686303L23.3137 2.10052L2.10049 23.3137L0.686279 21.8995Z"
+                                        fill="white" />
+                                    <path
+                                        d="M23.3137 21.8995L2.10052 0.686303L0.686304 2.10052L21.8995 23.3137L23.3137 21.8995Z"
+                                        fill="white" />
+                                </svg> </div>
+                        </button> </div>
+                </div>
+            </div>
+        </header>
+        <div class="app" id="app" data-v-page="project-page" data-v-pageajax-name="project-page">
+            <div class="custom-scroll project-page v-scroll" id="custom-scroll">
+                <div class="v-scroll__container">
+                    <div class="custom-scroll__outer">
+                        <div class="page-content">
+                            <div class="wrap">
+                                <interactive-line-text class="interactive-line-text project-page__header v-view">
+                                    <h1>Hyperbiosis</h1>
+                                </interactive-line-text>
+                            </div>
+                            <div class="project-page__categories v-view_b">
+                                <ul>
+                                    <li>
+                                        <dir-button class=" dir-button stroke " type="a"
+                                            href="../../all-projects/index.html">All Projects</dir-button>
+                                    </li>
+                                    <li>
+                                        <dir-button class=" dir-button stroke " type="a"
+                                            href="../../personal-projects/index.html">Personal Projects
+                                        </dir-button>
+                                    </li>
+                                    <li>
+                                        <dir-button class=" dir-button stroke " type="a"
+                                            href="../../comissions/index.html">Comissions
+                                        </dir-button>
+                                    </li>
+                                </ul>
+                            </div> <!-- Screen -->
+                            <div class="project-page__screen project-screen v-view_b">
+                                <div class="project-screen__info">
+                                    <div class="item-tags">#Generative art #Biosonification</div>
+                                    <div class="item-coords">-34.60176513547807, -58.36435661124131</div>
+                                    <div class="item-address">Berlin, Germany</div>
+                                </div> <!-- Image -->
+                                <scroll-section class="project-screen__image scroll-section" style="padding-top: 68%;">
+                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto" parallax-target="line"
+                                        parallax-strength="0.2">
+                                        <lazy-img class="mobile-hide"> <img
+                                                src="images/Plant-bass.png"
+                                                alt="title" srcset="fonts/placeholder.svg"
+                                                data-srcset="images/Plant-bass.png">
+                                        </lazy-img>
+                                        <lazy-img class="desktop-hide tablet-hide"> <img
+                                                src="images/Plant-bass.png"
+                                                alt="plant" srcset="fonts/placeholder.svg"
+                                                data-srcset="images/Plant-bass.png">
+                                        </lazy-img>
+                                    </scroll-parallax>
+                                </scroll-section>
+                            </div>
+                            <div class="project-page__features project-features v-view_b">
+                                <div class="project-features__content">
+                                    <div class="project-features__desc">
+                                        <p>Project under construction</p>
+                                    </div>
+                                </div>
+                                <div class="project-features__person project-person">
+                                    <div class="project-person__image">
+                                        <div>
+                                            <lazy-img> <img
+                                                    src="images/profile.jpg"
+                                                    alt="Luca Bermejo"
+                                                    srcset="fonts/placeholder.svg"
+                                                    data-srcset="images/profile.jpg">
+                                            </lazy-img>
+                                        </div>
+                                    </div>
+                                    <div class="project-person__content">
+                                        <div class="project-person__desc">
+                                            <p><span>Luca Bermejo</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-page__about project-about">
+                                <div class="project-about__image">
+                                    <div>
+                                        <lazy-img> <img
+                                                src="images/plant2.jpg"
+                                                alt="Hyperbiosis info" srcset="fonts/placeholder.svg"
+                                                data-srcset="images/plant2.jpg">
+                                        </lazy-img>
+                                    </div>
+                                </div>
+                                <div class="project-about__content v-view">
+                                    <div class="project-about__header">about the project:</div>
+                                    <readmore-content class="readmore-content" button-text="more"
+                                        button-text-reverse="hide">
+                                        <div class="readmore-content__content" data-content>
+                                            <div class="project-about__desc">
+                                                <p><i>Hyperbiosis</i> is a generative sonic installation that emerges from collaboration between human and non-human life, a bioelectrical partnership between plants, fungi, and humans. Using a custom-built “Biodata” interface, the project translates the imperceptible electrical activity of organic beings into MIDI signals, transforming biological pulses into sound.</p>
+                                                <p>Electrodes placed on leaves and mycelial networks capture subtle shifts in voltage, reactions to light, touch, proximity, even presence. These signals are not deterministic commands but living variables: flickers of intention, tension, or resonance. From this data, an evolving soundscape is generated, where composition becomes an act of deep listening, and the sonic field, a shared space of communication.
+                                                <p>In Hyperbiosis, the vegetal and fungal are not subjects of study or symbols of “nature”, they are agents, participants, collaborators. The installation invites us to reimagine the sonic as something more-than-human: a territory where perception bends and where empathy begins not with understanding, but with surrendering control.</p>
+                                                <p>This is not music <i>for</i> plants, it is music with them. A landscape built from pulses, not notes. From presence, not performance.</p>
+                                            </div>
+                                        </div> <button type="button" data-button class="readmore-content__button">
+                                            <span>more</span> </button>
+                                    </readmore-content>
+                                </div>
+                            </div>
+                            <div class="project-page__gallery v-view">
+                            </div>
+                        </div> <!-- Next Project -->
+                        <div class="project-page__next project-next" data-footer-clamp-->
+                            <div class="project-next__pre v-view_a">Next project</div> <a
+                                href="../intimx/index.html" class="project-next__name v-al"
+                                data-cursor="link">
+                                <interactive-line-text class="interactive-line-text v-view"> <span>INTIMX</span>
+                                </interactive-line-text>
+                            </a>
+                            <div class="project-next__image"> <a href="../intimx/index.html"
+                                    class="v-al" data-cursor="link"> <span>INTIMX</span>
+                                    <lazy-img> <img
+                                            src="../intimx/images/flyer3.jpg"
+                                            alt="The interruption of oblivion" srcset="fonts/placeholder.svg"
+                                            data-srcset="../intimx/images/flyer3.jpg">
+                                    </lazy-img>
+                                </a> </div>
+                        </div>
+                        <footer class="footer">
+                            <interactive-footer-bg class="footer__wrapper interactive-footer-bg">
+                                <div class="footer-contacts">
+                                    <div class="footer-contacts__telephone"> <a href="tel:+4915774025646">+49 157 74025646</a> </div>
+                                    <div class="footer-contacts__email"> <a href="mailto:lucxbermejo@gmail.com">
+                                            <span>lucxbermejo@gmail.com</span> <svg class="mobile-hide" width="91"
+                                                height="90" viewBox="0 0 91 90" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M21.3603 69.2783L69.4848 21.1539M69.4848 21.1539H28.7641M69.4848 21.1539V61.8746"
+                                                    stroke="black" />
+                                            </svg> <svg class="desktop-hide tablet-hide" width="33" height="32"
+                                                viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.94085 24.766L24.3465 8.3604M24.3465 8.3604H10.4648M24.3465 8.3604V22.2421"
+                                                    stroke="black" />
+                                            </svg> </a> </div>
+                                    <div class="footer-contacts__address"> Berlin, Germany </div>
+                                </div>
+                                <div class="footer-bottom">
+                                    <div class="footer-bottom__copyright">©2000-2025 LUCA BERMEJO
+                                    </div>
+                                    <div class="footer-bottom__address">Berlin, Germany</div>
+                                    <div class="footer-bottom__social">
+                                        <ul>
+                                            <li> <a href="https://www.behance.net/notanymultimedia" target="_blank"
+                                                    rel="noreferrer">Behance</a> </li>
+                                            <li> <a href="https://www.instagram.com/_zigurat/" target="_blank"
+                                                    rel="noreferrer">Instagram</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </interactive-footer-bg>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Popup Menu -->
+        <popup-menu class="popup-menu">
+            <div class="popup-menu__scroll" data-alpha>
+                <div class="popup-menu__container">
+                    <div class="popup-menu__wrap">
+                        <!-- Primary Content -->
+                        <div class="popup-menu__primary">
+                            <popup-menu-main-links class="popup-menu-main-links">
+                                <ul>
+                                    <li>
+                                        <hover-seeker class="hover-seeker"> <a href="../../all-projects/index.html"
+                                                class="v-al js-menu-link ">All Projects</a> </hover-seeker>
+                                    </li>
+                                    <li>
+                                        <hover-seeker class="hover-seeker"> <a
+                                                href="../../personal-projects/index.html"
+                                                class="v-al js-menu-link">Personal Projects</a> </hover-seeker>
+                                    </li>
+                                    <li>
+                                        <hover-seeker class="hover-seeker"> <a
+                                                href="../../comissions/index.html"
+                                                class="v-al js-menu-link ">Comissions</a> </hover-seeker>
+                                    </li>
+                                </ul>
+                            </popup-menu-main-links>
+                        </div> <!-- Secondary Content -->
+                        <div class="popup-menu__secondary">
+                            <!-- Addresses -->
+                            <popup-menu-addresses class="popup-menu-addresses column-content">
+                                <div class="column-content__item">
+                                    <p> Berlin, </p>
+                                    <p> Germany </p>
+                                </div>
+                            </popup-menu-addresses> <!-- Secondray links -->
+                            <popup-menu-secondary-links class="popup-menu-secondary-links">
+                                <div class="popup-menu-secondary-links__line" data-line></div>
+                                <ul class>
+                                    <li> <a href="../../about/index.html" class="v-al js-menu-link "
+                                            data-anchor>About Luca Bermejo</a>
+                                        <div class="popup-menu-secondary-links__line" data-line></div>
+                                </ul>
+                            </popup-menu-secondary-links>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </popup-menu>
+    </div>
+    <script src="../../../assets/js/app.cede8f994aed2b55889e.js" defer></script>
+</body>
+
+</html>
