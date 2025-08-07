@@ -25884,3 +25884,13 @@
       (d.cookie = "PHPPREFS=full;max-age=39800;");
   } catch (e) {}
 })({}, window, document, location);
+
+
+
+// Handle browser back/forward navigation
+window.addEventListener("popstate", function (event) {
+  const href = window.location.href;
+  if (window.__vevetNavigation && typeof window.__vevetNavigation._loadAjax === "function") {
+    window.__vevetNavigation._loadAjax({ popstate: true, push: false }, href);
+  }
+});
