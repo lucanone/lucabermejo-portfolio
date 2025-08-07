@@ -12675,218 +12675,205 @@
               },
             },
             {
-              key: "_loadAjax",
-              value: function (t, e) {
-                var n = this._prop;
-                this._v.ajax.load({
-                  url: e,
-                  method: n.ajax.method,
-                  data: { pageAjax: 1 },
-                  cache: n.cache,
-                  success: this._loadSuccess.bind(this, t, e),
-                  abort: this._loadAjax.bind(this, t, e),
-                  error: this._loadError.bind(this, t, e),
-                });
-              },
-            },
-            {
-              key: "_loadSuccess",
-              value: function (t, e, n) {
-                this._visitedLinks.push(e), this._update(t, e, n);
-              },
-            },
-            {
-              key: "_loadError",
-              value: function (t, e, n) {
-                this._prop.ajax.successCodes.includes(n.xhr.status)
-                  ? this._loadSuccess(t, e, n)
-                  : (window.location.href = e);
-              },
-            },
-            {
-              key: "_update",
-              value: function (t, e, n) {
-                var r = this,
-                  i = this._prop,
-                  o = i.selectors.outer,
-                  a = document.createElement("html");
-                a.innerHTML = n.xhr.responseText;
-                var u = a.querySelector(o);
-                if (null == u)
-                  throw new Error(
-                    "There's no HTMLElement under the selector \"".concat(
-                      o,
-                      '"'
-                    )
-                  );
-                var c = u.getAttribute(this._data.name);
-                if (null == c)
-                  throw new Error(
-                    'The outer "'
-                      .concat(o, '" must contain the attribute "')
-                      .concat(this._data.name, '"')
-                  );
-                var l = u.innerHTML,
-                  f = {
-                    ajax: n,
-                    response: n.xhr.responseText,
-                    html: l,
-                    outer: u,
-                    name: c,
-                    e: a,
-                    push: t.push,
-                    href: e,
-                    popstate: t.popstate,
-                  };
-                this._pageChange("loaded", c),
-                  this.lbt("loaded", f),
-                  (0, s.default)(function () {
-                    r._updateContents(f),
-                      (0, s.default)(function () {
-                        r._done(f);
-                      }, i.timeouts.done),
-                      (a = null);
-                  }, i.timeouts.update);
-              },
-            },
-            {
-              key: "_updateContents",
-              value: function (t) {
-                (this._lastData = t),
-                  this._updateUrl(t),
-                  this._updateTitle(t),
-                  this._updateHTML(t),
-                  this._prop.menuLinks.update &&
-                    this._updateMenuLinks(t, this.prop.menuLinks),
-                  this._updatePageData(t),
-                  this._pageChange("updated", t.name),
-                  this.lbt("updated", t);
-              },
-            },
-            {
-              key: "_updateUrl",
-              value: function (t) {
-                this._prop.update.url & t.push &&
-                  window.history.pushState(null, "", t.href);
-              },
-            },
-            {
-              key: "_updateTitle",
-              value: function (t) {
-                if (this._prop.update.title) {
-                  var e = {
-                    old: document.querySelector("title"),
-                    new: t.e.querySelector("title"),
-                  };
-                  (null !== e.old) & (null !== e.new) &&
-                    (e.old.innerHTML = e.new.innerHTML);
-                }
-              },
-            },
-            {
-              key: "_updateHTML",
-              value: function (t) {
-                this._prop.update.content &&
-                  ((this._outer.innerHTML = t.html), this.setLinks());
-              },
-            },
-            {
-              key: "updateMenuLinks",
-              value: function () {
-                var t =
-                  arguments.length > 0 && void 0 !== arguments[0]
-                    ? arguments[0]
-                    : this.prop.menuLinks;
-                (t = (0, o.default)(
-                  {
-                    update: !0,
-                    class: "active",
-                    compare: "href",
-                    selectorNew: ".menu a",
-                    selectorOld: ".menu a",
-                  },
-                  t
-                )),
-                  Object.keys(this._lastData).length > 0 &&
-                    this._updateMenuLinks(this._lastData, t);
-              },
-            },
-            {
-              key: "_updateMenuLinks",
-              value: function (t, e) {
-                for (
-                  var n = {
-                      old: document.querySelectorAll(e.selectorNew),
-                      new: t.e.querySelectorAll(e.selectorOld),
-                    },
-                    r = 0;
-                  r < n.new.length;
-                  r++
-                )
-                  for (
-                    var i = n.new[r],
-                      o = i.getAttribute(e.compare),
-                      s = i.classList.contains(e.class),
-                      a = 0;
-                    a < n.old.length;
-                    a++
-                  ) {
-                    var u = n.old[a];
-                    o === u.getAttribute(e.compare) &&
-                      (s
-                        ? u.classList.add(e.class)
-                        : u.classList.remove(e.class));
-                  }
-              },
-            },
-            {
-              key: "_updatePageData",
-              value: function (t) {
-                this._outer.setAttribute(this._data.name, t.name),
-                  (this._v.page = [t.name]);
-              },
-            },
-            {
-              key: "_done",
-              value: function (t) {
-                (this._loading = !1),
-                  this._pageChange("done", t.name),
-                  this.lbt("done", t);
-              },
-            },
-            {
-              key: "_pageChange",
-              value: function (t) {
-                var e =
-                    arguments.length > 1 && void 0 !== arguments[1]
-                      ? arguments[1]
-                      : "",
-                  n = this._prop.pageChange;
-                if (n.on) {
-                  if (
-                    (t === n.hide && this._v.vevetPage.hide(),
-                    t === n.destroy && this._v.vevetPage.destroy(),
-                    t === n.create)
-                  ) {
-                    for (
-                      var r = !1, i = !1, o = 0;
-                      o < this._v.vevetPages.length;
-                      o++
-                    ) {
-                      var s = this._v.vevetPages[o];
-                      s.name == e && (r = s),
-                        s.name == this._prop.pageChange.default && (i = s);
-                    }
-                    if (r) r.create(!0);
-                    else {
-                      if (!i) throw new Error("Default page doesn't exist!");
-                      i.create(!0);
-                    }
-                  }
-                  t === n.show && this._v.vevetPage.show();
-                }
-              },
-            },
+  key: "_loadAjax",
+  value: function (t, e) {
+    var n = this._prop;
+    this._v.ajax.load({
+      url: e,
+      method: n.ajax.method,
+      data: { pageAjax: 1 },
+      cache: n.cache,
+      success: this._loadSuccess.bind(this, t, e),
+      abort: this._loadAjax.bind(this, t, e),
+      error: this._loadError.bind(this, t, e),
+    });
+  },
+},
+{
+  key: "_loadSuccess",
+  value: function (t, e, n) {
+    this._visitedLinks.push(e);
+    this._update(t, e, n);
+  },
+},
+{
+  key: "_loadError",
+  value: function (t, e, n) {
+    if (this._prop.ajax.successCodes.includes(n.xhr.status)) {
+      this._loadSuccess(t, e, n);
+    } else {
+      window.location.href = e;
+    }
+  },
+},
+{
+  key: "_update",
+  value: function (t, e, n) {
+    var r = this,
+      i = this._prop,
+      o = i.selectors.outer,
+      a = document.createElement("html");
+    a.innerHTML = n.xhr.responseText;
+    var u = a.querySelector(o);
+    if (u === null)
+      throw new Error(`There's no HTMLElement under the selector "${o}"`);
+    var c = u.getAttribute(this._data.name);
+    if (c === null)
+      throw new Error(
+        `The outer "${o}" must contain the attribute "${this._data.name}"`
+      );
+    var l = u.innerHTML,
+      f = {
+        ajax: n,
+        response: n.xhr.responseText,
+        html: l,
+        outer: u,
+        name: c,
+        e: a,
+        push: t.push,
+        href: e,
+        popstate: t.popstate,
+      };
+    this._pageChange("loaded", c);
+    this.lbt("loaded", f);
+    (0, s.default)(function () {
+      r._updateContents(f);
+      (0, s.default)(function () {
+        r._done(f);
+      }, i.timeouts.done);
+      a = null;
+    }, i.timeouts.update);
+  },
+},
+{
+  key: "_updateContents",
+  value: function (t) {
+    this._lastData = t;
+    this._updateUrl(t);
+    this._updateTitle(t);
+    this._updateHTML(t);
+    this._prop.menuLinks.update &&
+      this._updateMenuLinks(t, this._prop.menuLinks);
+    this._updatePageData(t);
+    this._pageChange("updated", t.name);
+    this.lbt("updated", t);
+  },
+},
+{
+  key: "_updateUrl",
+  value: function (t) {
+    if (this._prop.update.url && t.push) {
+      window.history.pushState(null, "", t.href);
+    }
+  },
+},
+{
+  key: "_updateTitle",
+  value: function (t) {
+    if (this._prop.update.title) {
+      var e = {
+        old: document.querySelector("title"),
+        new: t.e.querySelector("title"),
+      };
+      if (e.old !== null && e.new !== null) {
+        e.old.innerHTML = e.new.innerHTML;
+      }
+    }
+  },
+},
+{
+  key: "_updateHTML",
+  value: function (t) {
+    if (this._prop.update.content) {
+      this._outer.innerHTML = t.html;
+      this.setLinks();
+    }
+  },
+},
+{
+  key: "updateMenuLinks",
+  value: function () {
+    var t =
+      arguments.length > 0 && void 0 !== arguments[0]
+        ? arguments[0]
+        : this._prop.menuLinks;
+    t = (0, o.default)(
+      {
+        update: true,
+        class: "active",
+        compare: "href",
+        selectorNew: ".menu a",
+        selectorOld: ".menu a",
+      },
+      t
+    );
+    if (Object.keys(this._lastData).length > 0) {
+      this._updateMenuLinks(this._lastData, t);
+    }
+  },
+},
+{
+  key: "_updateMenuLinks",
+  value: function (t, e) {
+    var n = {
+      old: document.querySelectorAll(e.selectorNew),
+      new: t.e.querySelectorAll(e.selectorOld),
+    };
+    for (var r = 0; r < n.new.length; r++) {
+      var i = n.new[r],
+        o = i.getAttribute(e.compare),
+        s = i.classList.contains(e.class);
+      for (var a = 0; a < n.old.length; a++) {
+        var u = n.old[a];
+        if (o === u.getAttribute(e.compare)) {
+          if (s) u.classList.add(e.class);
+          else u.classList.remove(e.class);
+        }
+      }
+    }
+  },
+},
+{
+  key: "_updatePageData",
+  value: function (t) {
+    this._outer.setAttribute(this._data.name, t.name);
+    this._v.page = [t.name];
+  },
+},
+{
+  key: "_done",
+  value: function (t) {
+    this._loading = false;
+    this._pageChange("done", t.name);
+    this.lbt("done", t);
+  },
+},
+{
+  key: "_pageChange",
+  value: function (t) {
+    var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "",
+      n = this._prop.pageChange;
+    if (n.on) {
+      if (t === n.hide) this._v.vevetPage.hide();
+      if (t === n.destroy) this._v.vevetPage.destroy();
+      if (t === n.create) {
+        var r = false,
+          i = false;
+        for (var o = 0; o < this._v.vevetPages.length; o++) {
+          var s = this._v.vevetPages[o];
+          if (s.name == e) r = s;
+          if (s.name == this._prop.pageChange.default) i = s;
+        }
+        if (r) r.create(true);
+        else {
+          if (!i) throw new Error("Default page doesn't exist!");
+          i.create(true);
+        }
+      }
+      if (t === n.show) this._v.vevetPage.show();
+    }
+  },
+},
           ]) && u(e.prototype, n),
           i
         );
@@ -14315,7 +14302,7 @@
         return t;
       }
       n.exports = Pt;
-    }.call(this, n(64), n(71)(t)));
+    }).call(this, n(64), n(71)(t));
   },
   function (t) {
     t.exports = function (t) {
