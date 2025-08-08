@@ -25885,13 +25885,16 @@
   } catch (e) {}
 })({}, window, document, location);
 
-// Handle back/forward navigation
-window.addEventListener("popstate", function () {
-  const currentUrl = window.location.href;
 
-  if (typeof VevetAjax !== "undefined" && typeof VevetAjax._loadAjax === "function") {
-    VevetAjax._loadAjax({ push: false, popstate: true }, currentUrl);
-  } else {
-    window.location.href = currentUrl;
+
+window.addEventListener("popstate", function (event) {
+  const url = location.href;
+  try {
+    if (window.vevetApp && typeof window.vevetApp._loadAjax === "function") {
+      window.vevetApp._loadAjax({ popstate: true }, url);
+    }
+  } catch (error) {
+    console.error("Popstate navigation failed:", error);
+    window.location.href = url;
   }
 });
