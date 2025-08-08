@@ -25885,12 +25885,13 @@
   } catch (e) {}
 })({}, window, document, location);
 
+// Handle back/forward navigation
+window.addEventListener("popstate", function () {
+  const currentUrl = window.location.href;
 
-
-// Handle browser back/forward navigation
-window.addEventListener("popstate", function (event) {
-  const href = window.location.href;
-  if (window.__vevetNavigation && typeof window.__vevetNavigation._loadAjax === "function") {
-    window.__vevetNavigation._loadAjax({ popstate: true, push: false }, href);
+  if (typeof VevetAjax !== "undefined" && typeof VevetAjax._loadAjax === "function") {
+    VevetAjax._loadAjax({ push: false, popstate: true }, currentUrl);
+  } else {
+    window.location.href = currentUrl;
   }
 });
