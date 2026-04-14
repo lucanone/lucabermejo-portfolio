@@ -2,33 +2,6 @@
 <html lang="en" class="v-reset v-no-transition has-gui ltr" dir="ltr">
 
 <head>
-    <!-- Meta -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <!-- ... resto de metas ... -->
-
-    <!-- FIX: Deshabilitar scroll restoration automático del browser -->
-    <script>
-        if (history.scrollRestoration) {
-            history.scrollRestoration = 'manual';
-        }
-    </script>
-
-    <link rel="stylesheet" href="assets/css/app.da5105bc9fd4609f2364.css">
-    <!-- ... -->
-    <!-- Meta -->
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <!-- ... resto de metas ... -->
-
-    <!-- FIX: Deshabilitar scroll restoration automático del browser -->
-    <script>
-        if (history.scrollRestoration) {
-            history.scrollRestoration = 'manual';
-        }
-    </script>
-
-    <link rel="stylesheet" href="assets/css/app.da5105bc9fd4609f2364.css">
-    <!-- ... -->
-    <!-- Meta -->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5">
@@ -42,7 +15,7 @@
     <meta name="theme-color" content="#000000">
 <!-- Meta -->
     <meta name="keywords"
-        content="luca bermejo, frontend developing, frontend developer, web design, electronic arts, fullstack, frontend">
+        content="luca bermejo, frontend developing, frontend developer, web design, electronic arts, frontend, events">
     <meta name="lang" content="en">
     <!-- Links -->
     <link rel="canonical" href="https://lucabermejo.com/en/">
@@ -51,17 +24,26 @@
     <!--Facebook Tags-->
     <meta property="og:site_name" content="Luca Bermejo">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="Luca Bermejo Web Developer">
+    <meta property="og:title" content="Luca Bermejo Graphic Design & Electronic Arts">
     <meta property="og:url" content="https://lucabermejo.com/en/">
     <!--Twitter Card-->
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Luca Bermejo Web Developer">
+    <meta name="twitter:title" content="Luca Bermejo Graphic Design & Electronic Arts">
     <meta name="twitter:description"
         content="">
     <link rel="stylesheet" href="assets/css/app.da5105bc9fd4609f2364.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116006521-1"></script>
     <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-116006521-1'); </script>
+    <!-- FIX: Back button navigation -->
+    <script>
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.addEventListener('popstate', function() {
+            window.location.href = document.location.href;
+        });
+    </script>
 </head>
 
 <body class="v-loading">
@@ -130,7 +112,7 @@
                         <home-intro class="home-intro">
                             <!-- Mobile Header -->
                             <div class="home-intro__header" data-header>
-                                <interactive-letter-text class="interactive-letter-text is-h1-large"> <span>Minimalism
+                                <interactive-letter-text class="interactive-letter-text is-h1-large"> <span>Modularity
                                     </span> </interactive-letter-text>
                                 <interactive-letter-text class="interactive-letter-text is-h1-large" is-reverse>
                                     <span>Ambition </span>
@@ -165,19 +147,15 @@
                             <div class="wrap_1">
                                 <section class="home-page__about home-about v-view">
                                     <interactive-line-text class="interactive-line-text home-about__header">
-                                        <h2>Developing my own expression of art and technology</h2>
+                                        <h2>Made for people who care about what things mean</h2>
                                     </interactive-line-text>
                                     <text-content class="text-content home-about__desc v-view_a">
-                                        <p>Luca Bermejo is an experimental artist and graphic designer from Buenos Aires, Argentina.
-                                            With a Diploma in Frontend Web Development, He is now studying a Bachelor in Electronic Arts
-                                            At UNTREF University.
-                                            Founder of various artistic
-                                            groups and movements such as KIDZ (Active since 2016) and EQUINOX MULTIMEDIA,
-                                            implementing original projects that become significant for
-                                            modern art and culture.</p>
+                                        <p>Luca Bermejo is a graphic designer and artist working across visual identity, editorial, and art direction.
+                                        His practice is shaped by a way of thinking that treats design as a compositional language: precise, atmospheric, and built around ideas rather than aesthetics alone. Co-Founder of KIDZ and Equinox Multimedia. He works with cultural institutions, independent labels and artists, publishers, and brands.</p>
                                     </text-content>
                                 </section>
                             </div> <!-- Awards -->
+
                             <div class="wrap">
                                 <section class="home-page__awards list-section">
                                     <h2 class="list-section__header v-view">Awards</h2>
@@ -220,6 +198,7 @@
                                         
                                     </div>
                                 </section>
+
                             </div> <!-- Portfolio -->
                             <div class="home-page__portfolio home-portfolio">
                                 <interactive-line-text class="interactive-line-text v-view">
@@ -229,19 +208,20 @@
                                     <marquee-text>Projects    </marquee-text>
                                 </div>
                                 <div class="home-portfolio__items">
-                                    <div class="project-previews"> <a href="sub-pages/detalle-proyectos/yen/index.html"
+                                    <div class="project-previews">
+                                        <a href="sub-pages/detalle-proyectos/intimx/index.html"
                                             class="project-preview v-al" data-item
-                                            data-src="images/yen/Push.png"
+                                            data-src="images/invent/expand.gif"
                                             data-cursor="link">
-                                            <div class="project-preview__super-tags">#Branding #Website Design #Social Media</div>
+                                            <div class="project-preview__super-tags">#installation #Multimedia</div>
                                             <scroll-section class="scroll-section project-preview__image">
                                                 <div>
                                                     <scroll-parallax class="scroll-parallax" parallax-dir="auto"
                                                         parallax-target="line" parallax-strength="0.2">
                                                         <lazy-img> <img
-                                                                src="images/yen/Push.png"
-                                                                alt="QUIR-App" srcset="fonts/placeholder.svg"
-                                                                data-srcset="images/yen/Push.png">
+                                                                src="sub-pages/detalle-proyectos/intimx/images/sala.jpeg"
+                                                                alt="INTIMX" srcset="fonts/placeholder.svg"
+                                                                data-srcset="sub-pages/detalle-proyectos/intimx/images/sala.jpeg">
                                                         </lazy-img>
                                                     </scroll-parallax>
                                                 </div>
@@ -249,63 +229,23 @@
                                             <div class="project-preview__container">
                                                 <div class="project-preview__preheader"></div>
                                                 <div class="project-preview__main">
-                                                    <div class="project-preview__header">Casa Yen</div>
+                                                    <div class="project-preview__header">INTIMX</div>
                                                     <div class="project-preview__thumb">
                                                         <lazy-img> <img
-                                                                src="images/yen/duobyn.jpg"
-                                                                alt="Casa Yen" srcset="fonts/placeholder.svg"
-                                                                data-srcset="images/yen/duobyn.jpg">
+                                                                src="sub-pages/detalle-proyectos/intimx/images/auris.jpeg"
+                                                                alt="invent a way, invent a place" srcset="fonts/placeholder.svg"
+                                                                data-srcset="sub-pages/detalle-proyectos/intimx/images/auris.jpeg">
                                                         </lazy-img>
                                                     </div>
                                                     <div class="project-preview__desc">
-                                                        <p>Graphic Identity Design, Social Media Assets Creation, Video Editing, Branding, Website Development.</p>
+                                                        <p>expanded research project that challenges the understanding of intimacy, through anonymous questionnaires, video testimonies, texts, performances, and activations</p>
                                                     </div>
                                                 </div>
-                                                <div class="project-preview__tags">#Branding #Website Design #Social Media</div>
+                                                <div class="project-preview__tags">#installation #Multimedia</div>
                                             </div>
                                         </a>
                                         
-                                        <a href="sub-pages/detalle-proyectos/equinox/index.html"
-                                            class="project-preview v-al" data-item
-                                            data-src="images/equinox/ojos.jpg"
-                                            data-cursor="link">
-                                            <div class="project-preview__super-tags">#Multimedia Arts #Design Studio</div>
-                                            <scroll-section class="scroll-section project-preview__image">
-                                                <div>
-                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
-                                                        parallax-target="line" parallax-strength="0.2">
-                                                        <lazy-img> <img
-                                                                src="images/equinox/ojos.jpg"
-                                                                alt="EQUINOX"
-                                                                srcset="fonts/placeholder.svg"
-                                                                data-srcset="images/equinox/ojos.jpg">
-                                                        </lazy-img>
-                                                    </scroll-parallax>
-                                                </div>
-                                            </scroll-section>
-                                            <div class="project-preview__container">
-                                                <div class="project-preview__preheader"></div>
-                                                <div class="project-preview__main">
-                                                    <div class="project-preview__header">EQUINOX MULTIMEDIA<br>
-                                                    </div>
-                                                    <div class="project-preview__thumb">
-                                                        <lazy-img> <img
-                                                                src="images/equinox/escorpion.jpg"
-                                                                alt="EQUINOX"
-                                                                srcset="fonts/placeholder.svg"
-                                                                data-srcset="images/equinox/escorpion.jpg">
-                                                        </lazy-img>
-                                                    </div>
-                                                    <div class="project-preview__desc">
-                                                        <p>Multimedia Design Studio & Arts Collective</p>
-                                                    </div>
-                                                </div>
-                                                <div class="project-preview__tags">#Arts Collective #Advocacy</div>
-                                            </div>
-                                        </a> 
-                                
-
-                                            <a href="sub-pages/detalle-proyectos/kidz/index.html"
+                                        <a href="sub-pages/detalle-proyectos/kidz/index.html"
                                             class="project-preview v-al" data-item
                                             data-src="/images/kidz/logo.jpg"
                                             data-cursor="link">
@@ -346,6 +286,81 @@
                                             </div>
                                         </a> 
 
+                                        <a href="sub-pages/detalle-proyectos/equinox/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="images/equinox/ojos.jpg"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Multimedia Arts #Design Studio</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/equinox/ojos.jpg"
+                                                                alt="EQUINOX"
+                                                                srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/equinox/ojos.jpg">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">EQUINOX MULTIMEDIA<br>
+                                                    </div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/equinox/escorpion.jpg"
+                                                                alt="EQUINOX"
+                                                                srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/equinox/escorpion.jpg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Multimedia Design Studio & Arts Collective</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Arts Collective #Advocacy</div>
+                                            </div>
+                                        </a> 
+                                        
+                                        <a href="sub-pages/detalle-proyectos/yen/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="images/yen/Push.png"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Branding #Website Design #Social Media</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/yen/Push.png"
+                                                                alt="QUIR-App" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/yen/Push.png">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">Casa Yen</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/yen/duobyn.jpg"
+                                                                alt="Casa Yen" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/yen/duobyn.jpg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Graphic Identity Design, Social Media Assets Creation, Video Editing, Branding, Website Development.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Branding #Website Design #Social Media</div>
+                                            </div>
+                                        </a>
+                                        <!--
                                         <a href="sub-pages/detalle-proyectos/invent/index.html"
                                             class="project-preview v-al" data-item
                                             data-src="images/invent/expand.gif"
@@ -382,7 +397,7 @@
                                                 </div>
                                                 <div class="project-preview__tags">#Zine #Editorial Design #Handmade #Collage</div>
                                             </div>
-                                        </a>
+                                        </a> -->
 
                                     </div>
                                 </div>
@@ -419,7 +434,7 @@
                                     <div class="footer-contacts__address"> Berlin, Germany </div>
                                 </div>
                                 <div class="footer-bottom">
-                                    <div class="footer-bottom__copyright">©2000-2025 LUCA BERMEJO
+                                    <div class="footer-bottom__copyright">©2000-2026 LUCA BERMEJO
                                     </div>
                                     <div class="footer-bottom__address">Berlin, Germany</div>
                                     <div class="footer-bottom__social">
