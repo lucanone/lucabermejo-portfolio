@@ -13,6 +13,19 @@
         }
     </script>
 
+        <!-- Back button: the AJAX router handles popstate itself. Mobile browsers restore pages from the
+        back/forward cache in a frozen transition state, so force a clean reload in that case. -->
+    <script>
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+                window.location.reload();
+            }
+        });
+    </script>
+
     <link rel="stylesheet" href="assets/css/app.da5105bc9fd4609f2364.css">
     <!-- ... -->
     <!-- Meta -->
