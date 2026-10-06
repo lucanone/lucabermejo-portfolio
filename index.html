@@ -35,11 +35,17 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116006521-1"></script>
     <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-116006521-1'); </script>
-    <!-- Back button: the site's AJAX page router (pageAjax in app.js) already handles popstate. -->
+    <!-- Back button: the AJAX router handles popstate itself. Mobile browsers restore pages from the
+         back/forward cache in a frozen transition state, so force a clean reload in that case. -->
     <script>
         if (history.scrollRestoration) {
             history.scrollRestoration = 'manual';
         }
+        window.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+                window.location.reload();
+            }
+        });
     </script>
 </head>
 
