@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en" class="v-reset v-no-transition has-gui ltr" dir="ltr">
+
+<head>
+    <!-- Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- ... resto de metas ... -->
+
+    <!-- Back button: the AJAX router handles popstate itself. Mobile browsers restore pages from the
+        back/forward cache in a frozen transition state, so force a clean reload in that case. -->
+    <script>
+        if (history.scrollRestoration) {
+            history.scrollRestoration = 'manual';
+        }
+        window.addEventListener('pageshow', function (e) {
+            if (e.persisted) {
+                window.location.reload();
+            }
+        });
+    </script>
+
+    <link rel="stylesheet" href="assets/css/app.da5105bc9fd4609f2364.css">
+    <!-- ... -->
+    <!-- Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=5">
+    <title>Study Cases - Luca Bermejo</title> 
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="../../images/favicon-96x96.png?v4" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg?v4" />
+    <link rel="shortcut icon" href="../../images/favicon.ico?v4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png?v4" />
+    <meta name="apple-mobile-web-app-title" content="Luca Bermejo" />
+    <link rel="manifest" href="https://lucabermejo.com/images/site.webmanifest?v4" />
+    <!-- Web -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <link rel="manifest" href="https://lucabermejo.com/en/manifest.webmanifest">
+    <!-- Meta -->
+    <meta name="description"
+        content="All Luca Bermejo projects. General Portfolio, Portfolio, Art Projects, Web Design and Comissions">
+    <meta name="keywords" content="Luca Bermejo, graphic design, electronic arts, artist, minimalist artist, minimalism,
+    Web Design, UX/UI, Web developer, Frontend">
+    <meta name="lang" content="en">
+    <meta name="abstract"
+        content="All Luca Bermejo projects, General Portfolio, Art Projects, Web Design, Comissions and Study Cases">
+    <!-- Links -->
+    <link rel="canonical" href="https://lucabermejo.com/en/study-cases/">
+    <link rel="alternate" hreflang="es" href="https://lucabermejo.com/es/casos-de-estudio/">
+    <link rel="alternate" hreflang="en" href="https://lucabermejo.com/en/study-cases/">
+    <!--Facebook Tags-->
+    <meta property="og:site_name" content="Luca Bermejo">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Study Cases">
+    <meta property="og:description"
+        content="All Luca Bermejo projects. General Portfolio, Art Projects, Web Design and Comissions">
+    <meta property="og:url" content="https://lucabermejo.com/en/study-cases/">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" href="../../assets/css/app.da5105bc9fd4609f2364.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116006521-1"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-116006521-1'); </script>
+    <link rel="canonical" href="https://lucabermejo.com/en/study-cases/">
+    <link rel="next" href="https://lucabermejo.com/en/study-cases/?page=2">
+</head>
+
+<body class="v-loading">
+    <div class="v-preloader" id="preloader">
+        <div class="v-preloader__loading" data-loading></div>
+    </div>
+    <div class="page" id="page">
+        <div class="header-plane"></div>
+        <header class="header">
+            <div class="header__wrap">
+                <div class="header__logo" translate="no"> <a href="../../index.html" class="v-al">
+                    <?xml version="1.0" encoding="UTF-8"?>
+                    <svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1900">
+                        <path d="M776.342,121.405l-428.407,114.791l-21.676,-80.896l509.21,-136.442l12.058,45.003l0.093,-0.025l244.919,914.05l1366.536,-366.162c1.232,-0.435 2.495,-0.816 3.787,-1.14c154.667,-38.806 245.671,-107.333 292.527,-185.749c44.948,-75.223 48.364,-158.237 31.776,-226.459c-13.452,-55.327 -39.382,-101.326 -68.573,-122.741c-18.635,-13.671 -22.665,-39.899 -8.994,-58.533c13.671,-18.635 39.899,-22.665 58.533,-8.994c38.494,28.24 76.404,84.728 96.551,155.807c28.877,101.882 22.283,233.197 -65.335,344.41c-38.557,48.94 -93.19,94.327 -168.526,130.948l168.787,629.92l476.233,-127.606l21.676,80.896l-556.988,149.245l-0.141,-0.526l-0.141,0.038l-187.038,-698.034l-2531.534,678.323l-21.676,-80.896l1011.643,-271.069l-235.301,-878.157Zm-169.201,93.204c26.707,-7.156 54.199,8.717 61.355,35.423c7.156,26.707 -8.717,54.199 -35.423,61.355c-26.707,7.156 -54.199,-8.717 -61.355,-35.423c-7.156,-26.707 8.717,-54.199 35.423,-61.355Z"
+                                fill="#fff" />
+                    </svg>
+                        <span>Luca Bermejo</span> </a> </div>
+                <dynamic-page-content class="header__nav dynamic-page-content" content-key="header-dynamic-key">
+                    <!-- For Blog Category -->
+                    <!-- For Blog Article -->
+                    <!-- For Portfolio -->
+                    <ul>
+                        <li>
+                            <dir-button class=" dir-button stroke-invert" type="a"
+                                href="../all-projects/index.html" >All Projects</dir-button>
+                        </li>
+                        <li>
+                        <li>
+                            <dir-button class=" dir-button stroke-invert" type="a"
+                                href="../personal-projects/index.html">Personal Projects</dir-button>
+                        </li>
+                        <li>
+                            <dir-button class=" dir-button stroke-invert" type="a"
+                                href="../comissions/index.html">Comissions</dir-button>
+                        </li>
+                        <li>
+                            <dir-button class=" dir-button stroke-invert active" type="a"
+                                href="../study-cases/index.html">Study Cases</dir-button>
+                        </li>
+                    </ul>
+                </dynamic-page-content>
+                <div class="header__states">
+                    <ul class="header__languages js-languages" translate="no">
+                        <li class> <a href="https://lucabermejo.com/es/study-cases/" class> <span> es </span> </a> </li>
+                        <li class=" active"> <a href="../study-cases/index.html" class=" active"> <span> en
+                                </span> </a> </li>
+                    </ul>
+                    <div class="header__burger"> <button class="burger-button js-menu-button"> <span>Menu</span>
+                            <div class="show"> <svg width="20" height="8" viewBox="0 0 20 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0H0V2H20V0ZM20 6H0V8H20V6Z"
+                                        fill="black" />
+                                </svg> <svg width="30" height="8" viewBox="0 0 30 8" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M30 0H0V2H30V0ZM30 6H0V8H30V6Z"
+                                        fill="white" />
+                                </svg> </div>
+                            <div class="hide"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.22168 14.364L14.3638 0.221817L15.778 1.63603L1.63589 15.7782L0.22168 14.364Z"
+                                        fill="#000" />
+                                    <path
+                                        d="M15.7783 14.364L1.63618 0.221817L0.221971 1.63603L14.3641 15.7782L15.7783 14.364Z"
+                                        fill="#000" />
+                                </svg> <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.686279 21.8995L21.8995 0.686303L23.3137 2.10052L2.10049 23.3137L0.686279 21.8995Z"
+                                        fill="white" />
+                                    <path
+                                        d="M23.3137 21.8995L2.10052 0.686303L0.686304 2.10052L21.8995 23.3137L23.3137 21.8995Z"
+                                        fill="white" />
+                                </svg> </div>
+                        </button> </div>
+                </div>
+            </div>
+        </header>
+        <div class="app" id="app" data-v-page="portfolio-page" data-v-pageajax-name="portfolio-page">
+            <div class="custom-scroll portfolio-page v-scroll" id="custom-scroll">
+                <div class="v-scroll__container">
+                    <div class="custom-scroll__outer">
+                        <div class="page-content">
+                            <interactive-line-text class="portfolio-page__header interactive-line-text v-view">
+                                <h1>Study Cases</h1>
+                            </interactive-line-text>
+                            <div class="v-view_b">
+                                <!-- Categories -->
+                                <div class="portfolio-page__categories">
+                                    <ul>
+                                        <li>
+                                            <dir-button class="dir-button stroke" type="a"
+                                                href="../all-projects/index.html">All Projects</dir-button>
+                                        </li>
+                                        <li>
+                                            <dir-button class=" dir-button stroke" type="a"
+                                                href="../personal-projects/index.html">Personal Projects
+                                            </dir-button>
+                                        </li>
+                                        <li>
+                                            <dir-button class=" dir-button stroke" type="a"
+                                                href="../comissions/index.html">Comissions
+                                            </dir-button>
+                                        </li>
+                                        <li>
+                                            <dir-button class=" dir-button stroke active" type="a"
+                                                href="../study-cases/index.html">Study Cases
+                                            </dir-button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <page-catalog class="portfolio-page__items page-catalog v-view v-view_a">
+                                <page-catalog-items class="page-catalog-items" use-paginator>
+                                    <div class="project-previews v-pagination" data-v-pagination-active="1"
+                                        data-v-pagination-max="3" id="v-pagination" data-text-more="load more"
+                                        data-total="23" data-count="10">
+
+                                        <a href="../detalle-proyectos/yen/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="../detalle-proyectos/yen/images/Push.png"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Branding #Website Design #Social Media</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="../detalle-proyectos/yen/images/Push.png"
+                                                                alt="Casa Yen" srcset="fonts/placeholder.svg"
+                                                                data-srcset="../detalle-proyectos/yen/images/Push.png">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">Casa Yen LLC</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="../detalle-proyectos/yen/images/duobyn.jpg"
+                                                                alt="Casa Yen" srcset="fonts/placeholder.svg"
+                                                                data-srcset="../detalle-proyectos/yen/images/duobyn.jpg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Graphic Identity Design, Social Media Assets Creation, Video Editing, Branding, Website Development.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Branding #Website Design #Social Media</div>
+                                            </div>
+                                        </a> 
+
+                                        <a href="../detalle-proyectos/roots/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="../detalle-proyectos/roots/images/kabloka.png"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Branding #Website Design #Social Media</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="../detalle-proyectos/roots/images/expedition.jpg"
+                                                                alt="Roots & Rites" srcset="fonts/placeholder.svg"
+                                                                data-srcset="../detalle-proyectos/roots/images/expedition.jpg">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">Roots & Rites</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="../detalle-proyectos/roots/images/selknam.jpg"
+                                                                alt="Roots & Rites" srcset="fonts/placeholder.svg"
+                                                                data-srcset="../detalle-proyectos/roots/images/selknam.jpg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Exhibition Curation, Archival Research, Spatial Design, Exhibition Texts, Installation, Logistics.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Curation #Tattooing #Exhibition</div>
+                                            </div>
+                                        </a> 
+                                        
+                                        <a href="../detalle-proyectos/equinox/index.html"
+                                    class="project-preview v-al" data-item
+                                    data-src="images/equinox/ojos.jpg"
+                                    data-cursor="link">
+                                    <div class="project-preview__super-tags">#Multimedia Arts #Design Studio #Arts Collective</div>
+                                    <scroll-section class="scroll-section project-preview__image">
+                                        <div>
+                                            <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                parallax-target="line" parallax-strength="0.2">
+                                                <lazy-img> <img
+                                                        src="images/equinox/ojos.jpg"
+                                                        alt="EQUINOX MULTIMEDIA"
+                                                        srcset="fonts/placeholder.svg"
+                                                        data-srcset="images/equinox/ojos.jpg">
+                                                </lazy-img>
+                                            </scroll-parallax>
+                                        </div>
+                                    </scroll-section>
+                                    <div class="project-preview__container">
+                                        <div class="project-preview__preheader"></div>
+                                        <div class="project-preview__main">
+                                            <div class="project-preview__header">EQUINOX MULTIMEDIA</div>
+                                            <div class="project-preview__thumb">
+                                                <lazy-img> <img
+                                                        src="images/equinox/escorpion.jpg"
+                                                        alt="EQUINOX MULTIMEDIA"
+                                                        srcset="fonts/placeholder.svg"
+                                                        data-srcset="images/equinox/escorpion.jpg">
+                                                </lazy-img>
+                                            </div>
+                                            <div class="project-preview__desc">
+                                                <p>Multimedia Design Studio & Arts Collective </p>
+                                            </div>
+                                        </div>
+                                        <div class="project-preview__tags">#Multimedia Arts #Design Studio #Arts Collective</div>
+                                    </div>
+                                </a>
+
+                                        <a href="../detalle-proyectos/collagenotdead/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="images/collagenotdead/16.jpg"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#TouchDesigner #Collage #Interactive Installation #Dadaism #Punk not dead</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/collagenotdead/16.jpg"
+                                                                alt="COLLAGE NOT DEAD" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/collagenotdead/16.jpg">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">COLLAGE NOT DEAD</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/collagenotdead/4.jpg"
+                                                                alt="COLLAGE NOT DEAD" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/collagenotdead/4.jpg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Interactive Personal exploration of Collage as a communicative tool throughout history;
+                                                            developed in TouchDesigner.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#TouchDesigner #Collage #Interactive Installation #Dadaism #Punk not dead</div>
+                                            </div>
+                                        </a>
+
+<a href="../detalle-proyectos/intimx/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="../"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Installation #Multimedia</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="../detalle-proyectos/intimx/images/sala.jpeg"
+                                                                alt="INTIMX" srcset="fonts/placeholder.svg"
+                                                                data-srcset="../detalle-proyectos/intimx/images/sala.jpeg">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">INTIMX</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="../detalle-proyectos/intimx/images/auris.jpeg"
+                                                                alt="BLACK MAMBO" srcset="fonts/placeholder.svg"
+                                                                data-srcset="../detalle-proyectos/intimx/images/auris.jpeg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>expanded research project that challenges the understanding of intimacy, through anonymous questionnaires, video testimonies, texts, performances, and activations</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Installation #Multimedia</div>
+                                            </div>
+                                        </a>
+
+                                        <a href="../detalle-proyectos/resonance/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="images/resonancia/resonancia.jpg"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Sound-Art #Sound-Landscape #Composition #Multidimensional Collage </div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/resonancia/resonancia.jpg"
+                                                                alt="COLLECTIVE RESONANCE" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/resonancia/resonancia.jpg">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">COLLECTIVE RESONANCE</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/resonancia/mantis.png"
+                                                                alt="COLLECTIVE RESONANCE" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/resonancia/mantis.png">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Collaborative audiovisual landscape composed of specific sounds,
+                                                            created from records of electromagnetic, mechanical and physical sources,
+                                                            naturally and analogically acousmatized, digitally edited and assembled.
+                                                            Developed under the mentorship of Ernesto Romeo.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Sound-Art #Sound-Landscape #Composition #Multidimensional Collage</div>
+                                            </div>
+                                        </a> 
+
+                                        <a href="../detalle-proyectos/hyperbiosis/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="../detalle-proyectos/hyperbiosis/images/Plant-bass.png"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Arduino #Biodata #Generative sound</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="../detalle-proyectos/hyperbiosis/images/Plant-bass.png"
+                                                                alt="HYPERBIOSIS" srcset="fonts/placeholder.svg"
+                                                                data-srcset="../detalle-proyectos/hyperbiosis/images/Plant-bass.png">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">HYPERBIOSIS</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="../detalle-proyectos/hyperbiosis/images/plant2.jpg"
+                                                                alt="HYPERBIOSIS" srcset="fonts/placeholder.svg"
+                                                                data-srcset="../detalle-proyectos/hyperbiosis/images/plant2.jpg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Generative sonic installation that emerges from collaboration between human and non-human life, a bioelectrical partnership between plants, fungi, and humans.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Arduino #Biodata #Generative sound</div>
+                                            </div>
+                                        </a>
+
+                                <a href="../detalle-proyectos/blackmambo/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="images/blackmambo/flyer.png"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#TouchDesigner #Sound-Reactive Visuals
+                                                #Branding</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/blackmambo/flyer.png"
+                                                                alt="BLACK MAMBO" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/blackmambo/flyer.png">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">BLACK MAMBO</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/blackmambo/collage.png"
+                                                                alt="BLACK MAMBO" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/blackmambo/collage.png">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Graphic Identity Design, Audio-Reactive Visual Performance at Site Specific Event
+                                                            developed in TouchDesigner, Social Media Posts and Stories Design.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#TouchDesigner #Sound-Reactive Visuals
+                                                    #Branding</div>
+                                            </div>
+                                        </a>
+                                        
+                                        <a href="../detalle-proyectos/kidz/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="images/kidz/logo.jpg"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Arts Collective #Advocacy</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/kidz/logo.jpg"
+                                                                alt="KIDZ" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/kidz/logo.jpg">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">KIDZ</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/kidz/me.jpg"
+                                                                alt="KIDZ" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/kidz/me.jpg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Dedicated to the organization of urban artistic interventions,
+                                                            with previous exhibitions and events in places such as the Recoleta Cultural Center,
+                                                            Nora Fisch Gallery and the National Library of Buenos Aires ''Mariano Moreno''</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Arts Collective #Advocacy</div>
+                                            </div>
+                                        </a> 
+                                        <a href="../detalle-proyectos/tierisches/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="images/tierisches/final.png"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Videolleter #Experimental Video #Language</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/tierisches/final.png"
+                                                                alt="TIERISCHES WERDEN" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/tierisches/final.png">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">TIERISCHES WERDEN</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/tierisches/brief.png"
+                                                                alt="TIERISCHES WERDEN" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/tierisches/brief.png">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Experimental Video-Letter about personal studies of Language, Psychology and German Cinema.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Experimental Video #Videoletter #Electronic Arts</div>
+                                            </div>
+                                        </a> 
+                                        <a href="../detalle-proyectos/small/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="../"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Ambient #Video Archive</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="../detalle-proyectos/small/images/pink1.png"
+                                                                alt="Thay Which is Small" srcset="fonts/placeholder.svg"
+                                                                data-srcset="../detalle-proyectos/small/images/pink1.png">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">That Which is Small</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="../detalle-proyectos/small/images/field.png"
+                                                                alt="That Which is Small" srcset="fonts/placeholder.svg"
+                                                                data-srcset="../detalle-proyectos/small/images/field.png">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Ambient composition and video work that evokes a quiet mourning for the attention we once gave the natural world.</p></div>
+                                                </div>
+                                                <div class="project-preview__tags">#Ambient #Video Archive</div>
+                                            </div>
+                                        </a>
+                                        
+                                        <a href="../detalle-proyectos/voronoi/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="images/voronoi/mariposa.png"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#TouchDesigner #Sound-Reactive #Electronic Arts #Generative Art</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/voronoi/mariposa.png"
+                                                                alt="VORONOI BUGS" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/voronoi/mariposa.png">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">VORONOI BUGS</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/voronoi/TD.png"
+                                                                alt="VORONOI BUGS" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/voronoi/TD.png">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Sound-Reactive visuals developed in TouchDesigner, part of the Collage
+                                                            exploration and translation into electronic arts. Generative piece.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#TouchDesigner #Sound-Reactive #Electronic Arts #Generative Art</div>
+                                            </div>
+                                        </a> 
+                                        
+                                        <a href="../detalle-proyectos/invent/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="images/invent/expand.gif"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Zine #Editorial Design #Handmade #Collage</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/invent/expand.gif"
+                                                                alt="INVENT A WAY, INVENT A PLACE" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/invent/expand.gif">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">INVENT A WAY, INVENT A PLACE</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/invent/retrato.jpg"
+                                                                alt="INVENT A WAY, INVENT A PLACE" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/invent/retrato.jpg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>The beginning of the Collage Explorations, project developed under the mentorship of
+                                                            Rosana Schoijett. Later on embodied into a Zine. This project adresses topics
+                                                            such as identity and corporality.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Zine #Editorial Design #Handmade #Collage</div>
+                                            </div>
+                                        </a> 
+                                        
+                                        <a href="../detalle-proyectos/oblivion/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="images/oblivion/esquema.jpg"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Printer Orchestra #Tech Trash</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/oblivion/esquema.jpg"
+                                                                alt="THE INTERRUPTION OF OBLIVION" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/oblivion/esquema.jpg">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">THE INTERRUPTION OF OBLIVION</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/oblivion/trash.jpg"
+                                                                alt="THE INTERRUPTION OF OBLIVION" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/oblivion/trash.jpg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Printer Orchestra made entirely from salvaged printers
+                                                            and tech trash, manipulated through Arduino.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Printer Orchestra #Tech Trash</div>
+                                            </div>
+                                        </a> 
+                                        
+                                        <a href="../detalle-proyectos/destroy/index.html"
+                                            class="project-preview v-al" data-item
+                                            data-src="../detalle-proyectos/images/destroy/equinox2.jpg"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Zine #Editorial Design #Handmade</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/destroy/equinox2.jpg"
+                                                                alt="DESTROY TO REBUILD" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/destroy/equinox2.jpg">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">DESTROY TO REBUILD</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/destroy/page2.jpg"
+                                                                alt="DESTROY TO REBUILD" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/destroy/page2.jpg">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Introduction Zine done with Equinox Multimedia.
+                                                        Consists of the projects made by the collective up
+                                                        to that moment.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Zine #Editorial Design #Handmade</div>
+                                            </div>
+                                        </a> 
+                                        
+                                        <a href=../detalle-proyectos/podcast/index.html
+                                        class="project-preview v-al" data-item
+                                        data-src="images/podcast/images/performance.jpg"
+                                        data-cursor="link">
+                                        <div class="project-preview__super-tags">#Podcast #Host #Production #Advocacy</div>
+                                        <scroll-section class="scroll-section project-preview__image">
+                                            <div>
+                                                <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                    parallax-target="line" parallax-strength="0.2">
+                                                    <lazy-img> <img
+                                                            src="images/podcast/images/performance.jpg"
+                                                            alt="QUEDA ENTRE NOS" srcset="fonts/placeholder.svg"
+                                                            data-srcset="images/podcast/images/performance.jpg">
+                                                    </lazy-img>
+                                                </scroll-parallax>
+                                            </div>
+                                        </scroll-section>
+                                        <div class="project-preview__container">
+                                            <div class="project-preview__preheader"></div>
+                                            <div class="project-preview__main">
+                                                <div class="project-preview__header">QUEDA ENTRE NOS PODCAST</div>
+                                                <div class="project-preview__thumb">
+                                                    <lazy-img> <img
+                                                            src="images/podcast/images/portada.jpg"
+                                                            alt="QUEDA ENTRE NOS" srcset="fonts/placeholder.svg"
+                                                            data-srcset="images/podcast/images/portada.jpg">
+                                                    </lazy-img>
+                                                </div>
+                                                <div class="project-preview__desc">
+                                                    <p>Podcast dedicated to the discussion of LGBTQIA+ issues and topics
+                                                        revolving the Latin American and intersectional experience of the community.</p>
+                                                </div>
+                                            </div>
+                                            <div class="project-preview__tags">#Podcast #Host #Production #Advocacy</div>
+                                        </div>
+                                    </a>
+                                    <a href=../detalle-proyectos/quir/index.html
+                                            class="project-preview v-al" data-item
+                                            data-src="images/QUIR/available.jpg"
+                                            data-cursor="link">
+                                            <div class="project-preview__super-tags">#Mobile app #Community
+                                                #Safe spaces</div>
+                                            <scroll-section class="scroll-section project-preview__image">
+                                                <div>
+                                                    <scroll-parallax class="scroll-parallax" parallax-dir="auto"
+                                                        parallax-target="line" parallax-strength="0.2">
+                                                        <lazy-img> <img
+                                                                src="images/QUIR/available.jpg"
+                                                                alt="QUIR-App" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/QUIR/available.jpg">
+                                                        </lazy-img>
+                                                    </scroll-parallax>
+                                                </div>
+                                            </scroll-section>
+                                            <div class="project-preview__container">
+                                                <div class="project-preview__preheader"></div>
+                                                <div class="project-preview__main">
+                                                    <div class="project-preview__header">QUIR-App</div>
+                                                    <div class="project-preview__thumb">
+                                                        <lazy-img> <img
+                                                                src="images/QUIR/thumbnail.png"
+                                                                alt="QUIR-App" srcset="fonts/placeholder.svg"
+                                                                data-srcset="images/QUIR/thumbnail.png">
+                                                        </lazy-img>
+                                                    </div>
+                                                    <div class="project-preview__desc">
+                                                        <p>Mobile App aimed at curating Businesses, Restaurants, Events, and Activities ensuring a Safe Space to LGBTQIA+ Individuals.</p>
+                                                        <p>Winning project of the 2022 competition of the Ministry of Technological Development and Innovation.
+                                                            Later presented at the British Embassy at the Honorary Reception Act for Lord Herbert of South Downs,
+                                                            British Prime Minister's special envoy for LGBTQIA+ rights.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="project-preview__tags">#Mobile app #Community
+                                                    #Safe spaces</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </page-catalog-items>
+                            </page-catalog>
+                        </div>
+                        <footer class="footer">
+                            <interactive-footer-bg class="footer__wrapper interactive-footer-bg">
+                                <div class="footer-contacts">
+                                    <div class="footer-contacts__telephone"> <a href="tel:+4915774025646">+49 157 74025646</a> </div>
+                                    <div class="footer-contacts__email"> <a href="mailto:lucxbermejo@gmail.com">
+                                            <span>lucxbermejo@gmail.com</span> <svg class="mobile-hide" width="91"
+                                                height="90" viewBox="0 0 91 90" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M21.3603 69.2783L69.4848 21.1539M69.4848 21.1539H28.7641M69.4848 21.1539V61.8746"
+                                                    stroke="black" />
+                                            </svg> <svg class="desktop-hide tablet-hide" width="33" height="32"
+                                                viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.94085 24.766L24.3465 8.3604M24.3465 8.3604H10.4648M24.3465 8.3604V22.2421"
+                                                    stroke="black" />
+                                            </svg> </a> </div>
+                                    <div class="footer-contacts__address"> Berlin, Germany </div>
+                                </div>
+                                <div class="footer-bottom">
+                                    <div class="footer-bottom__copyright">©2000-2026 LUCA BERMEJO
+                                    </div>
+                                    <div class="footer-bottom__address">Berlin, Germany</div>
+                                    <div class="footer-bottom__social">
+                                        <ul>
+                                            <li> <a href="https://www.behance.net/notanymultimedia" target="_blank"
+                                                    rel="noreferrer">Behance</a> </li>
+                                            <li> <a href="https://www.linkedin.com/in/lucabermejo/" target="_blank"
+                                                    rel="noreferrer">Linkedin</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </interactive-footer-bg>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- Popup Menu -->
+        <popup-menu class="popup-menu">
+            <div class="popup-menu__scroll" data-alpha>
+                <div class="popup-menu__container">
+                    <div class="popup-menu__wrap">
+                        <!-- Primary Content -->
+                        <div class="popup-menu__primary">
+                            <popup-menu-main-links class="popup-menu-main-links">
+                                <ul>
+                                    <li>
+                                        <hover-seeker class="hover-seeker"> <a href="index.html"
+                                                class="v-al js-menu-link">All Projects</a> </hover-seeker>
+                                    </li>
+                                    <li>
+                                        <hover-seeker class="hover-seeker"> <a
+                                                href="../personal-projects/index.html"
+                                                class="v-al js-menu-link ">Personal Projects</a> </hover-seeker>
+                                    </li>
+                                    <li>
+                                        <hover-seeker class="hover-seeker"> <a
+                                                href="../comissions/index.html"
+                                                class="v-al js-menu-link ">Comissions</a> </hover-seeker>
+                                    </li>
+                                    <li>
+                                        <hover-seeker class="hover-seeker"> <a
+                                                href="../study-cases/index.html"
+                                                class="v-al js-menu-link active">Study Cases</a> </hover-seeker>
+                                    </li>
+                                </ul>
+                            </popup-menu-main-links>
+                        </div> <!-- Secondary Content -->
+                        <div class="popup-menu__secondary">
+                            <!-- Addresses -->
+                            <popup-menu-addresses class="popup-menu-addresses column-content">
+                                <div class="column-content__item">
+                                    <p> Berlin, </p>
+                                    <p> Germany </p>
+                                </div>
+                            </popup-menu-addresses> <!-- Secondray links -->
+                            <popup-menu-secondary-links class="popup-menu-secondary-links">
+                                <div class="popup-menu-secondary-links__line" data-line></div>
+                                <ul class>
+                                    <li> <a href="../about/index.html" class="v-al js-menu-link "
+                                            data-anchor>About Luca Bermejo</a>
+                                        <div class="popup-menu-secondary-links__line" data-line></div>
+                                    </li>
+                                </ul>
+                            </popup-menu-secondary-links>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </popup-menu>
+    </div>
+    <script src="../../assets/js/app.cede8f994aed2b55889e.js" defer></script>
+</body>
+
+</html>
